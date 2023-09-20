@@ -29,7 +29,6 @@ class HBNBCommand(cmd.Cmd):
              'max_guest': int, 'price_by_night': int,
              'latitude': float, 'longitude': float
             }
-
     def preloop(self):
         """Prints if isatty is false"""
         if not sys.__stdin__.isatty():
@@ -37,7 +36,6 @@ class HBNBCommand(cmd.Cmd):
 
     def precmd(self, line):
         """Reformat command line for advanced command syntax.
-
         Usage: <class name>.<command>([<id> [<*args> or <**kwargs>]])
         (Brackets denote optional fields in usage example.)
         """
@@ -49,7 +47,6 @@ class HBNBCommand(cmd.Cmd):
 
         try:  # parse line left to right
             pline = line[:]  # parsed line
-
             # isolate <class name>
             _cls = pline[:pline.find('.')]
 
